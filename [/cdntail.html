@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>port</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link rel="manifest" href="/manifest.json">
+	
+	<script>
+    tailwind.config = {
+      theme: {
+
+				screens:{		
+			'lg':{'max':'1280px'},
+			'md':{'max':'1024px'},
+			'xs':{'max':'800px'},	
+			'sm':{'max':'640px'},
+			},
+
+
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+
+	<style>
+[x-cloak] {display: none;}
+ [h-full] {height:687px;}
+	.container { max-width:970px;}
+	.text-base {font-size: .8rem;line-height: 1.4;}
+	.text-sm{font-size: .7rem; line-height: 1.4;}
+	.text-lg{font-size: .9rem; line-height: 1.4;}
+	.pt-full{padding-top: 100%;}
+	.min-h-28 {min-height:7rem;}
+	@font-face {
+    font-family:Montserrat-Medium; /* Гарнитура шрифта */
+    src: url(fontfamily/Montserrat-Medium.woff); /* Путь к файлу со шрифтом */
+   }
+		 </style>
+
+</head>
+<body  class="lg:overflow-y-hidden min-h-screen bg-[url('img/background_437.png')]">
+
+
+	<header x-data="{open: false}" class="z-10 bg-white w-full h-[70px] lg:h-[50px] relative flex justify-between items-center">
+
+
+		<!--logo-->
+		<div class="">
+	
+			<img class=" w-32 xs:w-20 ml-10 lg:w-24 shrink-0" src="img/vex.png" alt="">
+		
+		</div>
+		
+		
+		<div class="flex  items-center mr-8">
+		
+			<ul  class=" lg:text-sm sm:hidden xs:mx-8 mx-12">
+				<li class="flex font-['Montserrat-Medium'] items-center xs:space-x-5 space-x-10 xs:text-[14px]  text-md font-semibold ">
+					<a class="" href="#"><div>Home</div></a>
+					<a href="#"><div>About</div></a>
+					<a href="#"><div>Workshop</div></a>
+					<a href="#"><div>Contact</div></a>
+				</li>
+			</ul>
+			<input type="text" class="border pl-2 xs:w-32 placeholder:font-['Montserrat-Medium'] focus:outline-none xs:placeholder:text-[16px] placeholder:pl-[100px] xs:placeholder:pl-[55px] placeholder:pl-[100px] lg:placeholder:pl-[110px] md:placeholder:pl-[100px] placeholder:pl-[100px] placeholder:right-0 placeholder:text-[#1f2738] placeholder:font-semibold border-black rounded-lg w-full" placeholder="Search" >
+		
+		
+			<button  class="sm:hidden ml-10">
+				<svg xmlns="http://www.w3.org/2000/svg" class="  w-7 -ml-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+				</svg>	
+			</button>	
+	
+			<button x-on:click="open = true"   class=" hidden sm:block z-100  ml-10">
+				<svg xmlns="http://www.w3.org/2000/svg" class="  w-7 -ml-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+				</svg>	
+			</button>	
+		
+		</div>
+	
+		<ul x-show="open" x-on:click.away="open = false" style="display:none" class=" z-100 opacity-75   sm:block lg:text-sm mx-90  bg-white absolute   left-6 right-6  top-[50px]">
+			<li  class="flex font-['Montserrat-Medium'] items-center  flex-col  space-y-2  text-md font-semibold ">
+				<a  href="#"><div class="">Home</div></a>
+				<a href="#"><div class="">About</div></a>
+				<a href="#"><div class="">Workshop</div></a>
+				<a href="#"><div>Contact</div></a>
+			</li>
+		</ul>
+	
+	
+	
+	</header>
+	
+	
+	
+	
+	
+	<div  class=" w-full h-full    flex " >
+		<!--left-->
+		<div class="w-40 md:w-32  lg:h-[500px] lg:bg-red-5  h-full relative">
+	
+			<img class="absolute xs:mt-1 xs:h-28 mt-44 md:h-32 lg:h-36 lg:mt-20 shrink-0 lg:top-[100px]" src="img/vector_smart_object_(double_click_to_edit)__482.png" alt="">
+			
+			<img class="h-20 xs:h-12 xs:mt-[335px] md:h-20 ml-16 mt-[538px] lg:mt-[570px] lg:top-[0px]    absolute" src="img/vector_smart_object_(double_click_to_edit)__457.png" alt="">
+			
+			
+				</div>
+	
+	<!--othe h-->
+	
+	<div class=" flex-col relative sm:h-[100px] lg:h-[300px]  md:w-[850px]  xs:w-[850px]  w-[750px]">
+	<img class="h-3.5 xs:h-2 xs:mt-12 mt-16 ml-12" src="img/vector_smart_object_(double_click_to_edit)__458.png" alt="">
+
+
+	<h2 class="font-['Montserrat-Medium'] text-[#0adab9] xs:text-[14px] xs:mt-[25px] ml-12 font-bold	tracking-wide mt-[45px] text-[18.2px]">
+		WE ARE THE CREATIVE
+	</h2>
+
+<h1 class="font-['Montserrat-Medium'] text-[33.9px] xs:leading-7  xs:text-[25px] font-bold	 ml-12 leading-10 tracking-wide text-white">
+
+	MARKETING <br> AGENCY
+
+</h1>
+
+<p class="text-[15px] font-['Nunito'] xs:text-[12px] leading-[18.4px] ml-12 font-normal	mt-[30px] xs:mt-[15px] text-white">
+
+	Lorem ipsum dolor sit amet, consectetur<br> adipiscing elit, sed do eiusmod tempor<br> incididunt ut labore et dolore magna aliqua.
+
+</p>
+
+
+<button class="border-2 xs:w-[90px] w-[110px] xs:mt-3 mt-5 text-white hover:opacity-70 transition ml-12 xs:text-[12px] text-[15px] px-[1px] py-1 font-['Montserrat-Medium'] border-white rounded-[18px] " type="button">SEE MORE</button>
+
+<div class="flex xs:mt-[15px]  ml-12 mt-[30px] xs:space-x-3 space-x-5  ">
+	<div class="bg-white px-[] rounded-full relative xs:w-[40px] xs:h-[40px]  w-[60px] h-[60px] ">
+		<img   class="ml-[9px] xs:mt-[8px] ml-[8px] xs:w-[25px] w-[41px]  mt-[10px]" src="img/shape__450.png" alt="">
+</div>
+	
+<div class="bg-white  rounded-full relative xs:w-[40px] xs:h-[40px]  w-[60px] h-[60px] ">
+	<img   class="ml-[13px] xs:ml-[9px] xs:w-[25px] w-[35px] xs:mt-[6px] mt-[10px]" src="img/shape__449.png" alt="">
+</div>
+
+<div class="bg-white xs:px-[10px] px-[15px] rounded-full relative xs:w-[40px] xs:h-[40px] w-[60px] h-[60px] ">
+	<img   class="ml-[1px] xs:mt-[7px]  mt-[10px]" src="img/shape__448.png" alt="">
+</div>
+
+</div>
+
+
+
+</div>
+<!--right-->
+<div class=" w-[420px]  xs:w-[300px] flex-col">
+
+<div class="mt-16 xs:mt-9 xs:ml-0 xs:ml-0 ml-10 flex xs:w-[120px] w-[180px] justify-start">
+	<img class="z-10 xs:h-[100px]  xs:-ml-5 xs:w-[100px] w-[120px]" src="img/vector_smart_object_(double_click_to_edit)__455.png" alt="">
+<h2 class="font-['Nunito'] text-[19.1px] xs:text-[14px] text-white font-bold tracking-wider xs:mt-5 mt-7 xs:-ml-10 xs:-ml-16 -ml-20">
+	Supercharge <br>
+Your Business<br>
+with Us!
+</h2>
+</div>
+
+
+	<img class="w-[66px] xs:w-[40px] xs:mt-[50px] mt-[87px] ml-[80px] xs:ml-[10px]" src="img/vector_smart_object_(double_click_to_edit)__438.png" alt="">
+
+<div class="flex  w-[160px]">
+	<img class="h-[200px] xs:h-[100px] xs:mt-[55px]  lg:mt-[95px]   mt-[57px]" src="img/vector_smart_object_(double_click_to_edit)__452.png" alt="">
+	<img class="h-[200px] xs:h-[100px] xs:mt-[55px] lg:mt-[95px] xs:-ml-8 -ml-16 mt-[57px]" src="img/vector_smart_object_(double_click_to_edit)__454.png" alt="">
+</div>
+
+</div>
+<div class="w-full  h-full  ">
+<div class="flex">
+
+	<div class=" flex justify-center  items-center">
+		<div class=" mt-20 relative">
+			<img class="w-[450px] xs:w-[800px] md:w-[650px] xs:-mt-[80px] xs:-ml-1  mt-16 ml-10 relative" src="img/vector_smart_object_(double_click_to_edit)__438.png" alt="">
+			 <img class="w-[350px] xs:w-[170px]  md:w-[290px] lg:w-[300px] xs:-mt-[265px] lg:-mt-[450px] absolute xs:ml-4 ml-16 -mt-[530px]" src="img/place_your_image_here_(double_click_to_edit)_578.png" alt="">
+			</div>
+	
+</div>
+
+<div class="flex-col ">
+
+	<img class="ml-4 xs:ml-0 -mt-4 xs:h-[150px] h-[350px]" src="img/vector_smart_object_(double_click_to_edit)__456.png" alt="">
+
+
+
+<div class="flex lg:mt-[30px] xs:-mt-[20px]   h-64 justify-end xs:-ml-[50px] xs:mr-[20px] mr-[30px] items-end">
+
+<ul class="space-y-2 ">
+	<li>
+		<a href="#">
+			<img class="w-[25px] xs:w-[15px] xs:h-[15px] h-[25px]" src="img/instagram_607.png" alt="">
+		</a></li>
+	
+		<li>
+			<a href="#">
+				<img class="w-[25px] h-[25px] xs:w-[15px] xs:h-[15px]" src="img/facebook_606.png" alt="">
+			</a></li>
+
+			<li>
+				<a href="#">
+					<img class="w-[25px] h-[25px] xs:w-[15px] xs:h-[15px]" src="img/twitter_605.png" alt="">
+				</a></li>
+
+				<li>
+					<a href="#">
+						<img class="w-[25px] h-[25px] xs:w-[15px] xs:h-[15px]" src="img/whatsapp_604.png" alt="">
+					</a></li>
+
+
+</ul>
+
+
+</div>
+
+</div>
+	</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</body>
+</html>
